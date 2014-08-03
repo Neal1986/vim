@@ -48,13 +48,13 @@ filetype plugin indent on    " required
 let g:clang_auto_select = 0
 let g:clang_complete_auto = 1
 let g:clang_complete_copen = 1
-let g:clang_hl_erroes = 0 
+let g:clang_hl_erroes = 1 
 let g:clang_periodic_quickfix = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_conceall_snippets = 1
 let g:clang_trailing_placeholder = 1
-let g:clang_close_preview = 0 
+let g:clang_close_preview = 1 
 let g:clang_user_options = '-I/usr/include/c++/4.4.4' "'-std=c++11 -stdlib=libc++' 
 "let g:clang_auto_user_options = 
 let g:clang_use_library = 1
@@ -73,5 +73,6 @@ set autoindent
 syntax on
 set hlsearch
 set incsearch
+set bs=2
 filetype indent on
 let g:indentLine_enabled= 1
