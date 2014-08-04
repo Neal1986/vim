@@ -64,6 +64,7 @@ let g:clang_complete_macros = 1
 let g:clang_complete_patterns = 1
 let g:clang_jumpto_back_key = '<C-O>'
 "let g:clang_debug = 1
+set nu
 set nowrap
 set tabstop=4
 set shiftwidth=4
