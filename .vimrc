@@ -15,6 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'gtags.vim'
 Plugin 'L9'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'Raimondi/delimitMate'
@@ -49,7 +50,7 @@ let g:clang_auto_select = 0
 let g:clang_complete_auto = 1
 let g:clang_complete_copen = 1
 let g:clang_hl_erroes = 1 
-let g:clang_periodic_quickfix = 1
+let g:clang_periodic_quickfix = 0
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_conceall_snippets = 1
@@ -58,14 +59,14 @@ let g:clang_close_preview = 1
 let g:clang_user_options = '-I/usr/include/c++/4.4.4' "'-std=c++11 -stdlib=libc++' 
 "let g:clang_auto_user_options = 
 let g:clang_use_library = 1
-let g:clang_library_path = "/usr/lib64/llvm" "'/usr/lib/'
+let g:clang_library_path = "/usr/lib/llvm" "'/usr/lib/'
 let g:clang_sort_algo = 'priority'
 let g:clang_complete_macros = 1
 let g:clang_complete_patterns = 1
 let g:clang_jumpto_back_key = '<C-O>'
 "let g:clang_debug = 1
-set nu
 set nowrap
+set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -75,5 +76,9 @@ syntax on
 set hlsearch
 set incsearch
 set bs=2
+set statusline=%F%m%r%h%w\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set laststatus=2
 filetype indent on
 let g:indentLine_enabled= 1
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
